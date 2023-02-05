@@ -50,8 +50,4 @@ function boton_paginacion(url_next, url_previous) {
     `
     
 }
-
-
-
-
 PokemonApi()
