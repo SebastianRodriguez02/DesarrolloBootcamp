@@ -51,3 +51,16 @@ function boton_paginacion(url_next, url_previous) {
     
 }
 PokemonApi()
+
+
+document.querySelector("#btnBusqueda").addEventListener("click", () => {
+    let urlBaseApi = "ttps://pokeapi.co/api/v2/pokemon"
+    let filtroUsuario = document.querySelector("#inputSearch").value
+    let filtroName = (filtroUsuario != "") ? `name=${filtroUsuario}&` : ""
+
+    let urlCompleta = urlBaseApi + filtroName
+    urlCompleta = urlCompleta.slice(0, urlCompleta.length - 1)
+    PokemonApi(urlCompleta)
+
+
+})
